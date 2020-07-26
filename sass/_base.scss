@@ -12,14 +12,31 @@ html {
     font-size: 62.5%; //1rem = 10px
 }
 
+// 16px = 100% = 1em = 1rem
 body {
     font-family: $display-font;
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: 200;
+    line-height: 1.40;
+    background-color: $color-very-light-gray;
+}
+
+a {
+    text-decoration: none;
+    color: $color-grayish-blue;
+}
+
+.btn {
+    color: $color-light-grayish-blue;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1.3rem 3rem;
+    border-radius: 1456rem;
+    background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 1.1rem;
     text-align: center;
 }
 

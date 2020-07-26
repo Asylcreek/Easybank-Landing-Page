@@ -1,0 +1,173 @@
+//Header layout
+@mixin viewportCenter {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $color-white;
+
+    &__container {
+        @include viewportCenter;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        & .nav {
+            list-style: none;
+            font-size: 1.5rem;
+            display: flex;
+
+
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+        }
+    }
+
+}
+
+.home {
+    @include viewportCenter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../images/bg-intro-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    &__image {
+        width: 40%;
+    }
+
+    &__container {
+        width: 40%;
+    }
+
+    &__heading {
+        margin-bottom: 4.5rem;
+        font-size: 6rem;
+        font-weight: 200;
+        color: $color-dark-blue;
+
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+        color: $color-grayish-blue;
+    }
+}
+
+.why {
+    background-color: $color-light-grayish-blue;
+    padding: 8rem 0;
+
+    &__wrapper {
+        @include viewportCenter;
+    }
+
+    &__card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 3.5rem;
+    }
+
+    &__container {
+        width: 60%;
+    }
+
+    &__heading {
+        margin-bottom: 2.5rem;
+        font-weight: 400;
+        color: $color-dark-blue;
+        font-size: 3.5rem;
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+        color: $color-grayish-blue;
+    }
+
+    &__card {
+        &__text {
+            font-size: 1.6rem;
+            color: $color-grayish-blue;
+            line-height: 1.6;
+        }
+
+        &__heading {
+            color: $color-dark-blue;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        &__image {
+            display: inline-block;
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+.articles {
+    @include viewportCenter;
+    padding: 8rem 0;
+
+    &__heading {
+        font-size: 3.5rem;
+        font-weight: 400;
+        color: $color-dark-blue;
+        padding-bottom: 4rem;
+    }
+
+    &__card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 3.5rem;
+    }
+
+    &__card {
+        background-color: $color-white;
+
+        &__details {
+            padding: 3rem;
+        }
+
+        &__image {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__image-container {
+            height: 20rem;
+            border-top-left-radius: .8rem;
+            border-top-right-radius: .8rem;
+            overflow: hidden;
+        }
+
+        &__author {
+            font-size: .8rem;
+            color: $color-grayish-blue;
+            margin-bottom: 1rem;
+        }
+
+        &__heading {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: $color-dark-blue;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        &__text {
+            color: $color-grayish-blue;
+            font-size: 1.4rem;
+        }
+    }
+
+}
